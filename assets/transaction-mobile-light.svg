@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="226" viewBox="0 0 270 226">
+<title>Shared use case · PostgreSQL</title><desc>HTTP and SQS call the same financial use case. Each execution has its own PostgreSQL transaction, which saves the outbox atomically with the wallet and ledger changes. After commit, the relay publishes the events to SQS.</desc>
+<rect x=".5" y=".5" width="269" height="225" rx="10" fill="#f2f0f5" stroke="#c9cde0"/>
+<path d="M135 34v11m-4-4 4 4 4-4M135 97v12m-4-4 4 4 4-4M135 175v11m-4-4 4 4 4-4" fill="none" stroke="#8291b6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="23" y="47" width="224" height="49" rx="8" fill="#e5e8f4" stroke="#c9cde0"/>
+<rect x="23" y="111" width="224" height="63" rx="8" fill="#e5e8f4" stroke="#c9cde0"/>
+<path d="M28 122v40" stroke="#884d3b" stroke-width="2" stroke-linecap="round"/>
+<g text-anchor="middle" fill="#1d2541" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="680"><text x="135" y="27">HTTP · SQS</text><text x="135" y="64">execute()</text><text x="135" y="128">PostgreSQL</text><text x="135" y="199">Relay → SQS</text></g>
+<g text-anchor="middle" fill="#485475" font-family="Segoe UI,Arial,sans-serif" font-size="13.5"><text x="135" y="86">Shared use case</text><text x="135" y="148">One transaction per execution</text><text x="135" y="167">Wallet + ledger + outbox</text><text x="135" y="220">After commit</text></g>
+</svg>
